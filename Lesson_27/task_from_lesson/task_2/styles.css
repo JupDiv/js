@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.counter {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.counter__btn {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10%;
+}
+.counter__value {
+  font-size: 50px;
+  margin: 0 16px;
+}
+
+.fa-solid {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=styles.css.map */
