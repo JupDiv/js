@@ -4,7 +4,7 @@ export const printing = () => {
   console.log(1);
 
   setTimeout(function () {
-    console.log(5);
+    console.log(5ч);
   }, 1000);
 
   console.log(2);
