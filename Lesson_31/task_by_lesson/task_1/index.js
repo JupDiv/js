@@ -4,19 +4,20 @@ export const requestUserData = (userId) => {
       setTimeout(() => {
         reject(new Error('User not found'));
       }, 500);
+    } else {
+      setTimeout(() => {
+        resolve({
+          name: 'John',
+          age: 17,
+          userId: `${userId}`,
+          email: 'userid777@example.com',
+        });
+      }, 1000);
     }
-    setTimeout(() => {
-      resolve({
-        name: 'John',
-        age: 17,
-        userId: userId,
-        email: 'userid777@example.com',
-      });
-    }, 1000);
   });
   return promise;
 };
 
-requestUserData('userid777').then((data) => console.log(data));
-
-requestUserData('broken').catch((error) => console.log(error));
+requestUserData('userid777')
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
