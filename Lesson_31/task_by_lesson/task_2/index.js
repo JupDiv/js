@@ -20,7 +20,7 @@ export const asyncCalculator = (value) =>
         new Promise((resolve) => {
           setTimeout(() => {
             const newValue = value * 2;
-            console.log(`Squared value: ${newValue}`);
+            console.log(`Doubled value: ${newValue}`);
             resolve(newValue);
           }, 500);
         })
