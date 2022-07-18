@@ -19,6 +19,6 @@ export const requestUserData = (userId) => {
   return promise;
 };
 
-//requestUserData('userid777').then((data) => console.log(data));
+requestUserData('userid777').then((data) => console.log(data));
 
 requestUserData('broken').catch((error) => console.log(error));
