@@ -5,16 +5,14 @@ export const requestUserData = (userId) => {
         reject(new Error('User not found'));
       }, 500);
     }
-    if (userId === 'userid777') {
-      setTimeout(() => {
-        resolve({
-          name: 'John',
-          age: 17,
-          userId: 'userid777',
-          email: 'userid777@example.com',
-        });
-      }, 1000);
-    }
+    setTimeout(() => {
+      resolve({
+        name: 'John',
+        age: 17,
+        userId,
+        email: 'userid777@example.com',
+      });
+    }, 1000);
   });
   return promise;
 };
