@@ -1,4 +1,4 @@
-const asyncCalculator = (value) =>
+export const asyncCalculator = (value) =>
   new Promise((resolve) => {
     setTimeout(() => {
       console.log(`Initial value: ${value}`);
