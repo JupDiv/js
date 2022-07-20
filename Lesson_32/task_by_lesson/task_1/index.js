@@ -8,7 +8,7 @@ function sumNumb(arr) {
     .reduce((acc, elem) => acc + +elem, 0);
 }
 
-const asyncSum = (...arg) => {
+export const asyncSum = (...arg) => {
   return Promise.all(arg)
     .then((data) => sumNumb(data))
     .catch(() => console.log("Cant't calculate"));
