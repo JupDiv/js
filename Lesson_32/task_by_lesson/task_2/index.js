@@ -21,13 +21,13 @@ const servers = [
   'https://server.com/au',
 ];
 
-export const getUserAsap = (userId) => {
+export const getUserASAP = (userId) => {
   const userUrls = servers.map((serverUrl) => `${serverUrl}/users/${userId}`);
 
   const requests = userUrls.map((userUrl) => request(userUrl));
   return Promise.race(requests);
 };
 
-const result = getUserAsap(`user-id-1`);
+const result = getUserASAP(`user-id-1`);
 
 result.then((data) => console.log(data));
