@@ -5,16 +5,14 @@ export function getTasksList() {
 }
 
 export function getTaskById(taskId) {
-  return fetch(baseUrl)
-    .then((response) => response.json())
-    .then((data) => data.filter((elem) => taskId === elem.id));
+  return fetch(`${baseUrl}/?id=${taskId}`).then((response) => response.json());
 }
 
-// examples
+// examples;
 // getTasksList().then((tasksList) => {
 //   console.log(tasksList); // ==> [ {'id':'1', 'isDone':false ... }, {'id':'2', 'isDone':false ... }, ...]
 // });
 
-// getTaskById('1').then((taskData) => {
+// getTaskById('2').then((taskData) => {
 //   console.log(taskData); // ==> { 'id': '2', 'text': 'District Communications Specialist', 'isDone': false, 'createdDate': 1651499052, 'finishedDate': 1651499052 }
 // });
