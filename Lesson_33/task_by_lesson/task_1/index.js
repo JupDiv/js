@@ -2,9 +2,6 @@ const userAvatar = document.querySelector('.user__avatar');
 const userName = document.querySelector('.user__name');
 const userLocation = document.querySelector('.user__location');
 
-const userNameInput = document.querySelector('.name-form__input');
-const userBtnInput = document.querySelector('.name-form__btn');
-
 const sendRequestFetch = (name) => {
   return fetch(`http://api.github.com/users/${name}`).then((response) =>
     response.json()
@@ -16,6 +13,8 @@ const userRender = (gitResponse) => {
   userName.textContent = name;
   userLocation.textContent = location ? `from ${location}` : null;
 };
+const userNameInput = document.querySelector('.name-form__input');
+const userBtnInput = document.querySelector('.name-form__btn');
 
 const onClickButton = () => {
   const getName = userNameInput.value;
