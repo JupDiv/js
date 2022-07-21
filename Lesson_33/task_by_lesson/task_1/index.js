@@ -14,7 +14,7 @@ const userRender = (gitResponse) => {
   const { avatar_url, name, location } = gitResponse;
   userAvatar.src = avatar_url;
   userName.textContent = name;
-  userLocation.textContent = location;
+  userLocation.textContent = location ? `from ${location}` : null;
 };
 
 const onClickButton = () => {
