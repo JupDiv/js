@@ -1,6 +1,6 @@
 const userAvatar = document.querySelector('.user__avatar');
 const userName = document.querySelector('.user__name');
-let userLocation = document.querySelector('.user__location');
+const userLocation = document.querySelector('.user__location');
 
 const userNameInput = document.querySelector('.name-form__input');
 const userBtnInput = document.querySelector('.name-form__btn');
@@ -11,11 +11,10 @@ const sendRequestFetch = (name) => {
   );
 };
 const userRender = (gitResponse) => {
-  console.log(gitResponse);
   const { avatar_url, location, name } = gitResponse;
   userAvatar.src = avatar_url;
   userName.textContent = name;
-  userLocation.textContent = location ? location : null;
+  userLocation.textContent = location ? `from ${location}` : null;
 };
 
 const onClickButton = () => {
