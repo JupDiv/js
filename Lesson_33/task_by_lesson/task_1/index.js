@@ -18,9 +18,9 @@ const userRender = (gitResponse) => {
   userLocation.textContent = location ? location : null;
 };
 
-const show = () => {
+const Show = () => {
   const getName = userNameInput.value;
   sendRequestFetch(getName).then((response) => userRender(response));
 };
 
-userBtnInput.addEventListener('click', show);
+userBtnInput.addEventListener('click', Show);
