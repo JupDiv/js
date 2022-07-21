@@ -11,10 +11,10 @@ const sendRequestFetch = (name) => {
   );
 };
 const userRender = (gitResponse) => {
-  const { avatar_url, location, name } = gitResponse;
+  const { avatar_url, name, location } = gitResponse;
   userAvatar.src = avatar_url;
   userName.textContent = name;
-  userLocation.textContent = location ? `from ${location}` : null;
+  userLocation.textContent = location;
 };
 
 const onClickButton = () => {
