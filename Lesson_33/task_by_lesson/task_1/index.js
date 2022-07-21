@@ -2,11 +2,6 @@ const userAvatar = document.querySelector('.user__avatar');
 const userName = document.querySelector('.user__name');
 const userLocation = document.querySelector('.user__location');
 
-const defaultAvatar = 'https://avatars.githubusercontent.com/u/1342004?v=4';
-userAvatar.src = defaultAvatar;
-const defaultUserName = 'Google';
-userName.textContent = defaultUserName;
-
 const sendRequestFetch = (name) => {
   return fetch(`http://api.github.com/users/${name}`).then((response) =>
     response.json()
