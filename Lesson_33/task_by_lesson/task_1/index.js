@@ -3,7 +3,7 @@ const userName = document.querySelector('.user__name');
 const userLocation = document.querySelector('.user__location');
 
 const sendRequestFetch = (name) => {
-  return fetch(`http://api.github.com/users/${name}`).then((response) =>
+  return fetch(`https://api.github.com/users/${name}`).then((response) =>
     response.json()
   );
 };
